@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body{
+            background-image: url("Raw background.jpg");
+		    background-position: center; 
+		    background-size: 100% 100%; 
+		    background-repeat: no-repeat;
+		    font-family: arial;
+			border-radius: 10px;
+        }
+
+        .header-container{
+            background: #2B7A0B;
+		    width: 100%;
+			height: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-radius: 20px;
+            text-align: center;
+		}
+
+        .form-container{
+            background: #F5F5F5;
+		    margin: 130px auto; 
+            width:500px;
+			height: auto;
+			color: black;
+			padding: 40px;
+			text-align: center;
+            border-radius: 75px;
+			font-size:200%;
+        }
+        
+        input{
+            font-size: 25px;
+        }
+
+        .footer-container{
+            background: #2B7A0B;
+		    width: 100%;
+			height: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+			border-radius: 20px;
+            text-align: center;
+		}
+
+        a:link{
+			color: white;
+  			background-color: transparent;
+			text-decoration: none;
+		}
+		a:visited{
+			color: white;
+			background-color: transparent;
+			text-decoration: none;
+		}
+		a:hover{
+			color: blue;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+    </style>
+</head>
+<body>
+    <div class="header-container">
+    <header>
+        <h1><img src ="DepEd Gentri Logo.png" width="10%" height="20%"></h1>
+			<h1 style="color: white">Record of Attendance</h1>
+    </header>
+    </div>
+    
+    <div class="form-container">
+    <form action="registration.php" method="post">
+        <label for="lrn" style="margin-left: 92px">LRN: </label>
+        <input type="text" id="lrn" name="lrn" minlength="12" maxlength="12" onkeypress="return isNumberKey(event)"/><br>
+
+        <label for="lastName">Last Name: </label>
+        <input type="text" id="lastName" name="lastName" minlength="1" maxlength="100" /><br>
+
+        <label for="firstName">First Name: </label>
+        <input  type="text" id="firstName" name="firstName" minlength="1" maxlength="100"/><br>
+
+        <label for="password" style="margin-left: 16px">Password: </label>
+        <input  type="password" id="password" name="password" minlength="1" maxlength="100"/><br><br>
+
+        <input style="background-color: #E8E2E2" type="submit"/>
+    </form>
+    </div>
+
+    <div class="footer-container">
+        <footer>
+            <h1><a href="login.php" title="Directs you to the log in page">Log in page</a></h1>
+        </footer>
+    </div>
+
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+            true;
+        }
+    </script>
+</body>
+</html>
